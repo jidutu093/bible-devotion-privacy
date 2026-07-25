@@ -19,7 +19,7 @@
 <body>
 <div class="container">
     <h1>DailyDevotion AI Privacy Policy</h1>
-    <p class="updated">Last updated: July 8, 2026</p>
+    <p class="updated">Last updated: July 25, 2026</p>
 
     <h2>1. Introduction</h2>
     <p>DailyDevotion AI ("we", "our", "us") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our mobile application.</p>
@@ -30,10 +30,11 @@
         <li><strong>No account registration</strong> — You do not need to create an account to use our app.</li>
         <li><strong>No personal data collection</strong> — We do not collect your name, email address, phone number, or any other identifying information.</li>
         <li><strong>No usage analytics</strong> — We do not use any analytics SDKs (Google Analytics, Firebase, etc.).</li>
-        <li><strong>No device identifiers</strong> — We do not collect device IDs, advertising identifiers, or location data.</li>
+        <li><strong>No hardware or advertising identifiers</strong> — We do not collect device hardware IDs or advertising identifiers (IDFA), and we do not collect location data. (A random, anonymous install identifier is generated for entitlement and quota purposes — see "Operational &amp; Security Data" below.)</li>
     </ul>
     <p><strong>Exception — AI Devotional Feature:</strong> When you use the AI devotional feature, your text input is temporarily transmitted to our server and processed by a third-party AI provider to generate your devotional. This data is not stored on our servers after the response is generated (it may be cached on your own device as part of your recent devotional history — see Section 3). See Section 4 for details.</p>
-    <p><strong>Operational &amp; Security Data:</strong> To verify subscriptions and entitlements and to prevent abuse, our server temporarily records an anonymous, randomly generated app identifier and the requesting IP address. These are used solely for entitlement verification, rate limiting, and abuse prevention — they are not linked to your name, email, or any other identity, are not used for any other purpose, and are not retained beyond the short operational window needed for these checks.</p>
+    <p><strong>Operational &amp; Security Data:</strong> To verify subscriptions and entitlements and to prevent abuse, our server temporarily records an anonymous, randomly generated app identifier and the requesting IP address. These are used solely for entitlement verification, rate limiting, and abuse prevention — they are not linked to your name, email, or any other identity, and are not used for any other purpose. They are kept only in the server's volatile memory for as long as needed for these checks and are cleared whenever the server process restarts; they are never written to a permanent database.</p>
+    <p><strong>Install identifier stored on your device:</strong> The app also generates a random, anonymous install identifier (not tied to your identity) and stores it in your device's secure keychain, so that your subscription and daily AI quota are preserved if you reinstall the app. This identifier stays on your device under your control; it is not used for tracking and is not shared with advertisers. Clearing the app's data from within the app does not erase this keychain identifier (it is retained deliberately to prevent quota abuse); deleting and reinstalling the app, or resetting your device, removes it.</p>
 
     <h2>3. Data Stored on Your Device</h2>
     <p>The following data is stored <strong>only on your device</strong> and is never sent to our servers:</p>
@@ -44,6 +45,7 @@
         <li>Your recent AI devotional history, including the situation text you entered (cached on your device so you can revisit past devotionals; never sent back to our servers)</li>
     </ul>
     <p>You can clear this data — including your recent devotional history — at any time by clearing the app's data in your device settings or by deleting the app.</p>
+    <p><strong>iCloud sync (optional):</strong> If you have iCloud enabled, the on-device data listed above (language/theme preferences, bookmarks, and recent devotional history) may sync across your other devices signed in to the same Apple ID via Apple's iCloud Key-Value Storage. This sync happens within your own Apple account — the data is still <strong>never sent to our servers</strong> — and is processed by Apple under Apple's privacy policy. You can disable it from your device's iCloud settings.</p>
 
     <h2>4. AI-Generated Devotional Content</h2>
     <p>When you use the AI devotional feature, the following occurs:</p>
@@ -51,13 +53,14 @@
         <li>Your text input (describing your situation) is sent to our server to generate a personalized devotional.</li>
         <li>We process this input solely for generating the devotional response.</li>
         <li><strong>We do not log, store, or retain your input text on our servers</strong> after the response is generated. Your input is cached only on your own device as part of your recent devotional history (see Section 3) — never on our servers.</li>
-        <li>AI-generated content is for encouragement only and does not constitute professional counseling or religious authority.</li>
+        <li>AI-generated content is for encouragement only, <strong>may be inaccurate or reflect biases</strong>, and does not constitute professional counseling, medical or mental-health advice, or religious authority. Verify important matters against Scripture and consult qualified professionals as needed.</li>
     </ul>
+    <p><strong>Where your input is processed:</strong> Our backend servers are located in the United States (Oregon). When you use the AI devotional feature, your text input transits these U.S.-based servers temporarily and is not persisted there. The AI provider then processes your input in the European Union (europe-west1) as described in Section 5 — your data never leaves EU jurisdiction for AI processing.</p>
 
     <h2>5. Third-Party Services</h2>
     <p>Our app uses the following third-party services:</p>
     <ul>
-        <li><strong>AI Provider:</strong> We use AI services (such as DeepSeek or Anthropic Claude) to generate devotional content. These providers may temporarily process your input according to their own privacy policies.</li>
+        <li><strong>AI Provider:</strong> To generate devotional content, your text input is sent to <strong>Google Gemini via Vertex AI</strong>, processed in the European Union (europe-west1) with EU data residency. Your input never leaves EU jurisdiction for AI processing. We rely on Google's EU data-residency commitments and Vertex AI's data-processing terms to protect your input during processing. See <a href="https://policies.google.com/privacy">Google Privacy Policy</a> for more information.</li>
         <li><strong>Purchases &amp; Subscriptions (Apple App Store / RevenueCat):</strong> When you purchase or restore Premium, your transaction is processed by Apple's App Store. We use RevenueCat to verify your subscription and apply your entitlement. RevenueCat receives a randomly generated, anonymous app identifier and purchase metadata — no name, email, or contact information. This is not linked to your identity. See <a href="https://www.revenuecat.com/privacy">RevenueCat's Privacy Policy</a> and <a href="https://www.apple.com/legal/privacy">Apple's Privacy Policy</a>.</li>
     </ul>
     <p>We do not integrate any advertising networks, social media SDKs, or tracking tools.</p>
@@ -72,7 +75,8 @@
     <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated "Last updated" date.</p>
 
     <h2>9. Your Regional Privacy Rights</h2>
-    <p>Because we handle only minimal, temporary operational data (an anonymous app identifier and IP address used solely for quota and abuse prevention, as described in Section 2) and no account or identity information, most regional data-protection rights have limited applicability. This includes the right to access, correct, delete, or opt out of the sale or sharing of personal data under laws such as the CCPA/CPRA (California, United States), the UK-GDPR and EU-GDPR (United Kingdom / European Union), PIPEDA (Canada), the Privacy Act (Australia), and the PDPA (Singapore / Malaysia). Your language and display preferences and bookmarks are stored <strong>only on your device</strong>, under your sole control, and can be cleared at any time via your device settings or by deleting the app. If you believe we hold any data about you, or if you have any privacy concern, contact us at jidutu093@gmail.com and we will respond promptly.</p>
+    <p>If you are in a region with data-protection laws — such as the CCPA/CPRA (California, United States), the UK-GDPR and EU-GDPR (United Kingdom / European Union), PIPEDA (Canada), the Privacy Act (Australia), or the PDPA (Singapore / Malaysia) — you may have rights over your personal data, including the right to access, correct, or delete it, and to object to or opt out of certain processing. Under these laws, the data described in this policy (such as the anonymous app identifier and IP address in Section 2, and the text you submit to the AI devotional feature in Section 4) may qualify as personal data, so these rights can apply. To exercise any right, or to ask what data we hold about you, contact us at jidutu093@gmail.com and we will respond promptly. Your language and display preferences and bookmarks are stored <strong>only on your device</strong>, under your sole control, and can be cleared at any time via your device settings or by deleting the app.</p>
+    <p><strong>Limits on deletion:</strong> Once your text input has been transmitted to the AI provider to generate a devotional, we cannot access or delete it after the fact — its retention and deletion are governed by the provider's privacy policy. Our server's operational logs (the anonymous install identifier and IP address described in Section 2) are held only in volatile memory and are cleared when the server process restarts, so there is typically nothing to delete there. RevenueCat holds your anonymous install identifier and purchase metadata; we can request its removal on your behalf — contact us to do so.</p>
 
     <h2>10. Contact Us</h2>
     <div class="contact">
@@ -83,7 +87,7 @@
     <hr style="margin:48px 0;border:none;border-top:1px solid #e8e0d6;">
 
     <h1>每日灵修 AI 隐私政策(简体中文)</h1>
-    <p class="updated">最后更新:2026年7月8日</p>
+    <p class="updated">最后更新:2026年7月25日</p>
 
     <h2>1. 引言</h2>
     <p>每日灵修 AI("我们")致力于保护您的隐私。本隐私政策说明您使用本移动应用时,我们如何处理信息。</p>
@@ -94,10 +98,11 @@
         <li><strong>无需注册账号</strong>——您无需创建账号即可使用本应用。</li>
         <li><strong>不收集个人数据</strong>——我们不收集您的姓名、电子邮件、电话号码或任何其他身份识别信息。</li>
         <li><strong>无使用分析</strong>——我们不使用任何分析 SDK(如 Google Analytics、Firebase 等)。</li>
-        <li><strong>无设备标识符</strong>——我们不收集设备 ID、广告标识符或位置数据。</li>
+        <li><strong>无硬件或广告标识符</strong>——我们不收集设备硬件 ID、广告标识符(IDFA),也不收集位置数据。(为权益验证与配额会生成一个随机匿名安装标识——见下方"运营与安全数据"。)</li>
     </ul>
     <p><strong>例外——AI 灵修功能:</strong>当您使用 AI 灵修功能时,您的文本输入会临时传输到我们的服务器,并由第三方 AI 提供商处理以生成灵修内容。此数据在生成回复后不会在我们的服务器上存储(可能作为最近灵修历史缓存在您自己的设备上——详见第 3 节)。详见第 4 节。</p>
-    <p><strong>运营与安全数据:</strong>为验证订阅与权益并防止滥用,我们的服务器会临时记录一个匿名、随机生成的应用标识符以及请求 IP 地址。这些信息仅用于权益验证、限流与防滥用——不与您的姓名、邮箱或任何其他身份信息关联,不以其他用途使用,也不会在上述检查所需的时间窗口之外保留。</p>
+    <p><strong>运营与安全数据:</strong>为验证订阅与权益并防止滥用,我们的服务器会临时记录一个匿名、随机生成的应用标识符以及请求 IP 地址。这些信息仅用于权益验证、限流与防滥用——不与您的姓名、邮箱或任何其他身份信息关联,不以其他用途使用。它们仅保存在服务器的易失性内存中,仅在这些检查所需期间保留,服务器进程重启时即清除;绝不写入持久化数据库。</p>
+    <p><strong>存储在您设备上的安装标识：</strong>应用还会生成一个随机、匿名的安装标识（不与您的身份关联），并存放在您设备的安全钥匙串中，以便在您重装应用后仍能保留订阅状态与每日 AI 配额。该标识始终保存在您的设备上，由您掌控；不用于追踪，也不与广告商共享。在应用内清除数据不会删除此钥匙串标识（故意保留以防配额滥用）；卸载并重装应用或恢复设备出厂设置可将其移除。</p>
 
     <h2>3. 存储在您设备上的数据</h2>
     <p>以下数据<strong>仅存储在您的设备上</strong>,绝不会发送到我们的服务器:</p>
@@ -108,6 +113,7 @@
         <li>您的最近 AI 灵修历史,包括您输入的处境文本(缓存在您的设备上,方便您回顾过往灵修;绝不会回传到我们的服务器)</li>
     </ul>
     <p>您可随时通过设备设置清除应用数据或卸载应用来删除这些信息(包括最近灵修历史)。</p>
+    <p><strong>iCloud 同步(可选):</strong>若您开启了 iCloud,上述设备端数据(语言/主题偏好、收藏的经文、最近灵修历史)可能通过 Apple 的 iCloud 键值存储,同步到登录同一 Apple ID 的您的其他设备。此同步发生在您自己的 Apple 账户内——这些数据仍<strong>绝不会发送到我们的服务器</strong>——由 Apple 按其隐私政策处理。您可在设备的 iCloud 设置中关闭此同步。</p>
 
     <h2>4. AI 生成的灵修内容</h2>
     <p>使用 AI 灵修功能时:</p>
@@ -115,13 +121,14 @@
         <li>您的文本输入(描述您的处境)会发送到我们的服务器,用于生成个性化灵修。</li>
         <li>我们仅将此输入用于生成灵修回复。</li>
         <li><strong>回复生成后,我们不会在我们的服务器上记录、存储或保留您的输入文本。</strong>您的输入仅作为最近灵修历史缓存在您自己的设备上(详见第 3 节),绝不存储在我们的服务器上。</li>
-        <li>AI 生成内容仅供鼓励参考,不构成专业心理咨询或宗教权威指导。</li>
+        <li>AI 生成内容仅供鼓励参考,<strong>可能不准确或带有偏见</strong>,不构成专业心理咨询、医疗或心理健康建议,也不构成宗教权威指导。重要事项请对照《圣经》核实,并按需咨询合格的专业人士。</li>
     </ul>
+    <p><strong>您的输入在何处处理:</strong>我们的后端服务器位于美国(俄勒冈)。使用 AI 灵修功能时,您的文本输入会临时经过这些位于美国的服务器,且不在该处持久化存储。随后,AI 提供商在欧盟(europe-west1)处理您的输入,详见第 5 节——您的数据在处理过程中从不离开欧盟司法管辖范围。</p>
 
     <h2>5. 第三方服务</h2>
     <p>本应用使用以下第三方服务:</p>
     <ul>
-        <li><strong>AI 提供商:</strong>我们使用 AI 服务(如 DeepSeek 或 Anthropic Claude)生成灵修内容。这些提供商可能根据其各自的隐私政策临时处理您的输入。</li>
+        <li><strong>AI 提供商：</strong>为生成灵修内容，您的文本输入会发送给 <strong>Google Gemini（经 Vertex AI）</strong>，在欧盟（europe-west1）处理，数据驻留于欧盟。您的输入在处理过程中从不离开欧盟司法管辖范围。我们依托 Google 的欧盟数据驻留承诺及 Vertex AI 的数据处理条款，在处理过程中保护您的输入。详情参见 <a href="https://policies.google.com/privacy">Google 隐私政策</a>。</li>
         <li><strong>购买与订阅(Apple App Store / RevenueCat):</strong>当您购买或恢复 Premium 时,交易由 Apple App Store 处理。我们使用 RevenueCat 验证您的订阅并应用权益。RevenueCat 接收随机生成的匿名应用标识符和购买元数据——不含姓名、电子邮件或联系信息。此信息不与您的身份关联。参见 <a href="https://www.revenuecat.com/privacy">RevenueCat 隐私政策</a>和 <a href="https://www.apple.com/legal/privacy">Apple 隐私政策</a>。</li>
     </ul>
     <p>我们不集成任何广告网络、社交媒体 SDK 或追踪工具。</p>
@@ -136,7 +143,8 @@
     <p>我们可能不时更新本隐私政策。任何变更将反映在本页面,并更新"最后更新"日期。</p>
 
     <h2>9. 您的地区隐私权利</h2>
-    <p>由于我们仅处理最少的临时运营数据(用于配额与防滥用的匿名应用标识符与 IP 地址,详见第 2 节),且不涉及账号或身份信息,多数地区的数据保护权利适用性有限。这包括根据美国加州 CCPA/CPRA、英国 UK-GDPR、欧盟 GDPR、加拿大 PIPEDA、澳大利亚隐私法、新加坡/马来西亚 PDPA 等法律所享有的访问、更正、删除或退出个人数据销售/共享的权利。您的语言和显示偏好及收藏<strong>仅存储在您的设备上</strong>,完全由您控制,可随时通过设备设置或卸载应用清除。如果您认为我们持有您的任何数据,或有任何隐私疑虑,请联系 jidutu093@gmail.com,我们将及时回复。</p>
+    <p>如果您所在地区有数据保护法律——如美国加州 CCPA/CPRA、英国 UK-GDPR、欧盟 GDPR、加拿大 PIPEDA、澳大利亚隐私法、新加坡/马来西亚 PDPA——您可能对您的个人数据享有权利,包括访问、更正、删除,以及反对或退出某些处理。根据这些法律,本政策所述数据(如第 2 节的匿名应用标识符与 IP 地址,以及第 4 节您提交给 AI 灵修功能的文本)可能构成个人数据,因此这些权利可能适用。如需行使任何权利,或想了解我们持有您的哪些数据,请联系 jidutu093@gmail.com,我们将及时回复。您的语言和显示偏好及收藏<strong>仅存储在您的设备上</strong>,完全由您控制,可随时通过设备设置或卸载应用清除。</p>
+    <p><strong>删除的局限：</strong>您的文本输入一旦传输给 AI 提供商用于生成灵修，我们事后便无法访问或删除，其留存与删除受提供商隐私政策约束。我们服务器的运营日志（第 2 节所述的匿名安装标识符与 IP 地址）仅保存在易失性内存中，服务器进程重启时即清除，因此通常无需删除。RevenueCat 持有您的匿名安装标识符与购买元数据；我们可代您请求移除——请联系我们。</p>
 
     <h2>10. 联系我们</h2>
     <div class="contact">

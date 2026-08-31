@@ -9,48 +9,147 @@
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #333; line-height: 1.7; background: #faf8f5; }
         .container { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
         h1 { font-size: 32px; color: #8B7355; margin-bottom: 8px; }
-        .tagline { font-size: 18px; color: #5C4A3A; margin-bottom: 28px; }
-        h2 { font-size: 20px; color: #5C4A3A; margin-top: 28px; margin-bottom: 12px; border-bottom: 1px solid #e8e0d6; padding-bottom: 6px; }
+        .tagline { font-size: 18px; color: #5C4A3A; margin-bottom: 6px; font-weight: 600; }
+        .sub { font-size: 16px; color: #5C4A3A; margin-bottom: 24px; }
+        h2 { font-size: 20px; color: #5C4A3A; margin-top: 34px; margin-bottom: 12px; border-bottom: 1px solid #e8e0d6; padding-bottom: 6px; }
         p, li { margin-bottom: 10px; }
         ul { padding-left: 24px; }
         .card { background: #f0ebe4; padding: 18px 22px; border-radius: 10px; margin: 16px 0; }
         .lang { color: #888; font-size: 14px; margin-bottom: 24px; }
         .lang a { color: #8B7355; }
+        .shots { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; }
+        .shots img { width: 220px; height: auto; border-radius: 14px; flex: 0 0 auto; box-shadow: 0 4px 14px rgba(60,46,32,.12); }
+        .cta { display: inline-block; background: #5C4A3A; color: #fff; text-decoration: none; font-size: 17px; font-weight: 600; padding: 12px 26px; border-radius: 10px; margin: 4px 0 20px; }
+        .cta:hover { background: #8B7355; }
+        video { width: 100%; max-width: 360px; border-radius: 18px; box-shadow: 0 4px 14px rgba(60,46,32,.12); display: block; margin: 12px 0; }
         footer { color: #999; font-size: 13px; margin-top: 40px; border-top: 1px solid #e8e0d6; padding-top: 16px; }
         footer a { color: #8B7355; }
+        .split { display: flex; gap: 12px; }
+        .split > div { flex: 1; background: #f0ebe4; border-radius: 10px; padding: 14px 18px; }
+        .split h3 { font-size: 15px; color: #8B7355; margin-bottom: 6px; }
+        .split ul { padding-left: 18px; }
+        .split li { margin-bottom: 4px; font-size: 14px; }
     </style>
 </head>
 <body>
 <div class="container">
-    <h1>Bible Reply &amp; Daily Study</h1>
-    <p class="tagline">Start each day with a Bible verse — and a devotional that meets your situation. · 每天一句经文,一段贴合你处境的灵修。</p>
+    <p class="lang">English below · <a href="#zh">中文介绍见下方</a></p>
 
+    <!-- ① Hero -->
+    <h1>Bible Reply &amp; Daily Study</h1>
+    <p class="tagline">Let Scripture meet you every day.</p>
+    <p class="sub">Let every question lead you back to Scripture.</p>
+    <a class="cta" href="https://apps.apple.com/app/id6781559150">⬇︎ Download on the App Store</a>
+    <div class="shots">
+        <img src="img/en_01_today.png" alt="Today's verse">
+        <img src="img/en_02_for_you.png" alt="Write what's on your mind">
+        <img src="img/en_03_devotional_result.png" alt="A complete devotional">
+    </div>
+
+    <!-- ③ Features -->
     <h2>A daily rhythm</h2>
     <ul>
-        <li><strong>Daily verse</strong> — A carefully selected Bible passage each day (English WEB + Chinese CUV), with related verses for context. Free, forever.</li>
-        <li><strong>AI devotional</strong> — Describe what you're going through in your own words; receive scripture-based reflection, practical steps, and a short prayer. Available in English and Chinese.</li>
-        <li><strong>Bookmarks &amp; history</strong> — Save verses, revisit your recent devotionals, and keep a daily streak.</li>
-        <li><strong>Home screen widget &amp; daily reminder</strong> — Today's verse at a glance.</li>
-        <li><strong>Follows you across devices</strong> — Bookmarks and devotional history are saved to your account (Sign in with Apple) and restored on any device.</li>
+        <li><strong>Daily verse, updated every day</strong> — today's verse plus related verses for context (English WEB + Chinese CUV). Free, forever.</li>
+        <li><strong>Write down what's on your mind</strong> — AI locates a relevant Bible passage and generates a complete devotional for your situation.</li>
+        <li><strong>One devotional, five parts</strong> — your question · the located scripture · a plain-words insight · one action step · a sincere prayer.</li>
+        <li><strong>Home-screen widget &amp; daily reminder</strong> — today's verse at a glance.</li>
+        <li><strong>Bookmarks &amp; history follow you</strong> — saved to your account (Sign in with Apple, anonymous) and restored on any device.</li>
     </ul>
 
+    <!-- ④ Trust -->
+    <h2>Built to be trusted</h2>
     <div class="card">
-        <p><strong>Privacy-first by design.</strong> No ads, no analytics SDKs, no trackers. Sign-in (Apple only, optional) uses an anonymous identifier — never your email or name. Your input is processed in the EU and kept only in your in-app devotional history (deletable anytime). See the <a href="./">Privacy Policy</a>.</p>
+        <p><strong>Privacy-first by design.</strong> No ads, no analytics SDKs, no trackers. Sign-in is optional and uses an anonymous identifier — never your email or name. AI input is processed in the EU and kept only in your deletable devotional history. See the <a href="./">Privacy Policy</a>.</p>
+        <p><strong>AI never fabricates scripture.</strong> Verse text is always looked up from the built-in public-domain Bible (CUV 1919 + WEB, 31,091 verses) — never recalled from AI memory.</p>
         <p><strong>Crisis-safe.</strong> If you share thoughts of self-harm, the app responds with vetted help resources instead of generated content.</p>
     </div>
 
+    <!-- ⑤ Free & Premium -->
+    <h2>Free &amp; Premium</h2>
+    <div class="split">
+        <div>
+            <h3>Free — forever</h3>
+            <ul>
+                <li>Daily verse</li>
+                <li>Home-screen widget</li>
+                <li>Verse bookmarks</li>
+                <li>Devotional history</li>
+                <li>Save &amp; share</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Premium — AI devotional</h3>
+            <ul>
+                <li>Personalized scripture</li>
+                <li>Scripture insight</li>
+                <li>Action suggestions</li>
+                <li>A prayer written for you</li>
+                <li>Up to 30 / day</li>
+            </ul>
+        </div>
+    </div>
+    <p>Monthly or yearly, <strong>7-day free trial</strong> for new users, cancel anytime.</p>
+
+    <!-- ⑥ Closing CTA + footer -->
+    <h2>Start today</h2>
+    <a class="cta" href="https://apps.apple.com/app/id6781559150">⬇︎ Download on the App Store</a>
+
     <h2 id="zh">中文介绍 · 圣经有云-每日灵修</h2>
+    <p class="tagline">把圣经，放进你的每一天。</p>
+    <p class="sub">让每一次提问，都回到圣经。</p>
+    <a class="cta" href="https://apps.apple.com/app/id6781559150">⬇︎ 在 App Store 下载</a>
+    <div class="shots">
+        <img src="img/zh_01_today.png" alt="今日经文">
+        <img src="img/zh_02_for_you.png" alt="写下近况">
+        <img src="img/zh_03_devotional_result.png" alt="完整灵修">
+    </div>
+    <video controls preload="none" poster="img/zh_01_today.png">
+        <source src="preview_zh.m4v" type="video/mp4">
+    </video>
+
+    <h2>每天的节奏</h2>
     <ul>
-        <li><strong>每日经文</strong>——每天精选一段圣经经文(英文 WEB + 中文和合本),附相关经文;永久免费。</li>
-        <li><strong>AI 灵修</strong>——用自己的话描述处境,获得基于圣经的解读、切实可行的行动步骤与一段简短祷告;支持中英文。</li>
-        <li><strong>收藏与历史</strong>——收藏经文、回顾最近的灵修、保持每日连续打卡。</li>
-        <li><strong>桌面小组件与每日提醒</strong>——今日经文一目了然。</li>
-        <li><strong>跨设备跟随</strong>——收藏与灵修历史保存在你的账号下(Apple 登录),换机登录即恢复。</li>
+        <li><strong>每日经文，天天更新</strong>——今日经文 + 相关经文(英文 WEB + 中文和合本)；永久免费。</li>
+        <li><strong>写下近况</strong>——AI 从圣经定位相关经文，为你生成一份完整的灵修。</li>
+        <li><strong>一份灵修，五个部分</strong>——你的提问 · 定位的经文 · 通俗解读 · 一条行动建议 · 一段真诚的祷告。</li>
+        <li><strong>桌面小组件 + 每日提醒</strong>——今日经文一目了然。</li>
+        <li><strong>收藏与历史跨设备跟随</strong>——保存在你的账号下(Apple 登录，匿名标识)，换机即恢复。</li>
     </ul>
 
+    <h2>值得托付</h2>
     <div class="card">
-        <p><strong>隐私优先。</strong>无广告、无分析 SDK、无追踪。登录仅可选 Apple 匿名标识——绝不需要你的邮箱或姓名。AI 输入在欧盟处理;仅保存于你账号下的灵修历史,可随时删除。详见<a href="./">隐私政策</a>。</p>
+        <p><strong>隐私优先。</strong>无广告、无分析 SDK、无追踪。登录可选,且只使用匿名标识——绝不需要你的邮箱或姓名。AI 输入在欧盟处理;仅保存于你账号下可随时删除的灵修历史。详见<a href="./">隐私政策</a>。</p>
+        <p><strong>AI 不伪造经文。</strong>经文正文永远由内置的公有领域圣经(和合本 1919 + 英文 WEB,31,091 节)按出处取出,绝不靠 AI 记忆复述。</p>
+        <p><strong>危机安全。</strong>若你写下自伤的念头,App 会回应经过审核的帮助资源,而不是生成内容。</p>
     </div>
+
+    <h2>免费与 Premium</h2>
+    <div class="split">
+        <div>
+            <h3>免费——永久</h3>
+            <ul>
+                <li>每日经文</li>
+                <li>桌面小组件</li>
+                <li>经文收藏</li>
+                <li>最近灵修</li>
+                <li>保存与分享</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Premium——AI 灵修</h3>
+            <ul>
+                <li>专属经文</li>
+                <li>经文解读</li>
+                <li>行动建议</li>
+                <li>为你写的祷告</li>
+                <li>每天最多 30 次</li>
+            </ul>
+        </div>
+    </div>
+    <p>月付或年付,新用户 <strong>7 天免费试用</strong>,随时取消。</p>
+
+    <h2>今天开始</h2>
+    <a class="cta" href="https://apps.apple.com/app/id6781559150">⬇︎ 在 App Store 下载</a>
 
     <footer>
         Bible Reply · iOS · <a href="./support.html">Support · 支持中心</a> · <a href="./">Privacy · 隐私</a> · <a href="./terms.html">Terms · 条款</a>

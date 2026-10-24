@@ -19,7 +19,7 @@
 <body>
 <div class="container">
     <h1>Bible Reply Privacy Policy</h1>
-    <p class="updated">Last updated: September 28, 2026</p>
+    <p class="updated">Last updated: October 24, 2026</p>
 
     <h2>1. Introduction</h2>
     <p>Bible Reply ("we", "our", "us") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our mobile application.</p>
@@ -29,7 +29,7 @@
     <ul>
         <li><strong>Reading needs no account</strong> — The daily verse and the home-screen widget work without any account. Saving bookmarks and using the AI devotional feature require signing in with Apple; we request <strong>no email or name</strong> (no scopes), so Apple sends our server only a stable, anonymous user identifier.</li>
         <li><strong>No personal data collection</strong> — We do not collect your name, email address, phone number, or any other identifying information.</li>
-        <li><strong>No usage analytics</strong> — We do not use any analytics SDKs (Google Analytics, Firebase, etc.).</li>
+        <li><strong>No third-party analytics</strong> — We do not use any analytics SDKs (Google Analytics, Firebase, etc.). The app sends only a small number of <strong>anonymous, first-party feature events</strong> (for example, that a feature was opened) to our own backend: no account identifier, no content, and none of your input text is included. What you read, listen to, or look up is not recorded in your account.</li>
         <li><strong>No advertising or hardware identifiers</strong> — We do not collect the IDFA, location data, or device hardware IDs, and no third-party SDK receives any device identifier. Subscription entitlement is verified by Apple's StoreKit 2 directly (the app presents its own Apple-signed transaction to our server). (For the optional AI feature, entitlement and quota are keyed on the stable, anonymous identifier that Sign in with Apple provides — see below.)</li>
         <li><strong>No religious or other special-category profiling.</strong> The App provides Christian devotional content, but we do not ask you to state your religion, and we do not assign, store, or process any religious-belief label, profile, or category about you. The fact that you use this App is not treated by us as information about your religious beliefs. If you voluntarily mention faith-related matters in your text input for the AI devotional, that input is processed solely to generate your devotional (see Section 4) and is never used to profile or categorize you.</li>
     </ul>
@@ -38,6 +38,7 @@
     <p><strong>Error reports:</strong> If the app crashes or hits an unexpected error, it may send a technical report to our own server (app platform, app version, error type, error message, and stack trace). These reports contain no account identifier and no devotional content — long passages of your own text that could appear inside an error message are automatically redacted before anything leaves your device. Reports go only into our hosting provider's standard logs (retention as above) and are never stored in a database.</p>
     <p><strong>Account identifier stored on your device:</strong> For the optional AI devotional feature, Sign in with Apple gives our server a stable, anonymous identifier (never your email or name). A copy of this anonymous identifier is kept in your device's secure keychain so that your session is preserved when you reinstall the app on the same device. Our server also retains this anonymous identifier (together with the entitlement binding and device public key described above) in its EU-hosted database, solely for entitlement verification and abuse prevention. It is not used for tracking and is not shared with advertisers. Signing out clears the local copy; deleting your account from within the app removes both the local copy and the server-side records. The Apple ID credential itself is managed by you under your device's Apple ID settings.</p>
     <p><strong>Sign in with Apple (AI feature, optional):</strong> To use the AI devotional feature, the app offers Sign in with Apple. We request <strong>no scopes</strong>, so Apple provides our server only a stable, anonymous user identifier (never your email or name). Our server verifies Apple's cryptographic signature on this identifier and issues its own short-lived session. Your subscription entitlement is verified directly from the Apple-signed StoreKit 2 transaction your device presents — never via a third party — so it is bound to your verified identity and cannot be impersonated. You can use the app fully without signing in except for the AI feature, and you can delete your account at any time in Settings (this clears our cached session and entitlement data; the Apple ID credential itself, and any active subscription, are managed by you under your device's Apple ID settings).</p>
+    <p><strong>Curated audio &amp; verse notes (what we do NOT store):</strong> Streaming the curated read-aloud voices and opening a plain-language verse note both require signing in (for stream/entitlement authorization). These requests carry only your anonymous session identifier, the passage or verse you opened, and — for notes — your Premium status; we do not create or keep any list of the passages you have played or the verses you have looked up. The narration files and note texts are content prepared on our side, not your personal content.</p>
 
     <h2>3. Where Your Content Is Stored</h2>
     <p>The following data is stored <strong>only on your device</strong> and is never sent to our servers:</p>
@@ -63,6 +64,7 @@
     <p><strong>Automated decision-making:</strong> The AI devotional is generated entirely by automated means without human review. Under GDPR Article 22, you have the right not to be subject to a decision based solely on automated processing where it produces legal effects or similarly significantly affects you. The devotional content is presented as encouragement only — it does not constitute professional advice (medical, mental-health, legal, or financial) and is not used to make any decision about you as an individual. If you object to receiving AI-generated content without human oversight, please do not use this feature.</p>
     <p><strong>Data controller and processor:</strong> For purposes of applicable data-protection law, <strong>we (the app developer) are the data controller</strong> — we decide what data is processed and why. <strong>Mistral AI (a French/European company) is the data processor</strong>, acting on our instructions to generate the devotional content. Your relationship with Mistral is governed by Mistral's own privacy policy and terms.</p>
     <p><strong>Where your input is processed:</strong> Our backend servers are located in the <strong>European Union</strong> (Frankfurt, Germany). When you use the AI devotional feature, your text input is transmitted to these EU-based servers, and our AI provider (Mistral) also processes it in the European Union (EU data residency is Mistral's default). After your devotional is generated, the input lives only in your account's devotional history (see Section 3) — never in any server log.</p> <p><strong>Data residency and transfers:</strong> Your input is processed and stored within the European Union — both our backend (Frankfurt, Germany) and our AI provider (Mistral) operate in the EU. Should any processing ever need to occur outside the EU in the future, we would rely on the Standard Contractual Clauses approved by the European Commission (or an equivalent lawful safeguard). <strong>We do not transfer your data to China, or to any jurisdiction lacking an adequate level of data protection.</strong></p>
+    <p><strong>Plain-language verse notes:</strong> The notes shown when you long-press a verse in the Bible reader are pre-generated by AI on our side (from the public-domain Bible text, with no input from you) and served read-only from our server; they are labeled as AI-generated in the app. Opening a note sends only the verse reference and your session (for Premium entitlement checking) — see Section 2 for what is and is not stored.</p>
 
     <h2>5. Third-Party Services</h2>
     <p>Our app uses the following third-party services:</p>
@@ -74,6 +76,7 @@
             </ul>
             See Mistral's Commercial Terms (training) and Privacy Policy (retention) for details.</li>
         <li><strong>Purchases &amp; Subscriptions (Apple App Store):</strong> When you purchase or restore Premium, your transaction is processed entirely by Apple's App Store. We verify your Premium entitlement server-side against Apple using the Apple-signed StoreKit 2 transaction your device presents — no third-party entitlement SDK is involved. Apple receives only what it already processes as the purchase facilitator; we receive no name, email, or contact information, and nothing about your purchase is shared with any analytics or tracking service. See <a href="https://www.apple.com/legal/privacy">Apple's Privacy Policy</a>.</li>
+        <li><strong>Audio delivery (Cloudflare R2):</strong> The curated read-aloud chapters are stored on and delivered from Cloudflare R2 object storage, via short-lived signed links minted by our EU backend. The audio files are narrations of public-domain Bible text and contain no personal data; Cloudflare does not receive your account identifier from us.</li>
     </ul>
     <p>We do not integrate any advertising networks, social media SDKs, or tracking tools.</p>
 
@@ -102,7 +105,7 @@
     <hr style="margin:48px 0;border:none;border-top:1px solid #e8e0d6;">
 
     <h1>圣经有云 隐私政策(简体中文)</h1>
-    <p class="updated">最后更新:2026年9月28日</p>
+    <p class="updated">最后更新:2026年10月24日</p>
 
     <h2>1. 引言</h2>
     <p>圣经有云("我们")致力于保护您的隐私。本隐私政策说明您使用本移动应用时,我们如何处理信息。</p>
@@ -112,7 +115,7 @@
     <ul>
         <li><strong>阅读无需账号</strong>——每日经文与主屏小组件无需任何账号即可使用。收藏经文与 AI 灵修功能需通过 Sign in with Apple 登录;我们<strong>不申请邮箱或姓名</strong>(不请求任何 scope),Apple 仅向我们的服务器返回一个稳定的匿名用户标识。</li>
         <li><strong>不收集个人数据</strong>——我们不收集您的姓名、电子邮件、电话号码或任何其他身份识别信息。</li>
-        <li><strong>无使用分析</strong>——我们不使用任何分析 SDK(如 Google Analytics、Firebase 等)。</li>
+        <li><strong>无第三方分析</strong>——我们不使用任何分析 SDK(如 Google Analytics、Firebase 等)。应用仅向我们自有后端发送少量<strong>匿名的自有功能事件</strong>(例如某功能被打开):不含账号标识、不含内容、不含您输入的任何文字。您阅读、收听或查阅的内容不会记录到您的账号。</li>
         <li><strong>无广告或硬件标识符</strong>——我们不收集 IDFA、位置数据或设备硬件 ID,也没有任何第三方 SDK 接收设备标识。订阅权益由 Apple 的 StoreKit 2 直接验证(应用将自身的 Apple 签名交易呈现给我们的服务器)。(可选的 AI 功能,权益与配额以 Sign in with Apple 提供的稳定匿名标识为键——见下文。)</li>
         <li><strong>不进行宗教或其他特殊类别画像。</strong>本应用提供基督教灵修内容,但我们不会要求您声明您的宗教信仰,也不会为您分配、存储或处理任何关于您的宗教信仰标签、画像或分类。您使用本应用这一事实本身,不被我们视为有关您宗教信仰的信息。若您在 AI 灵修功能的文本输入中自愿提及信仰相关内容,该输入仅用于生成您的灵修(详见第 4 节),绝不用于对您画像或分类。</li>
     </ul>
@@ -121,6 +124,7 @@
     <p><strong>错误上报:</strong>当应用崩溃或遇到意外错误时,可能向我们的自有服务器发送一份技术报告(应用平台、应用版本、错误类型、错误消息与堆栈)。这些报告不含账号标识、不含灵修内容——错误消息中若出现您本人输入的大段文字,会在离开设备前被自动打码。报告仅写入托管服务商的标准日志(保留期同上),绝不存入数据库。</p>
     <p><strong>存储在您设备上的账号标识：</strong>使用可选的 AI 灵修功能时,Sign in with Apple 会向我们的服务器提供一个稳定的匿名标识(绝非您的邮箱或姓名)。该匿名标识的一份副本保存在您设备的安全钥匙串中,以便在同一设备上重装应用后,您的登录会话仍能保留。我们的服务器也会把这个匿名标识(连同上述权益绑定与设备公钥)保存在其位于欧盟的托管数据库中,仅用于权益验证与防滥用。该标识不用于追踪,也不与广告商共享。退出登录会清除本地副本;在应用内删除账号会同时删除本地副本与服务端记录。Apple ID 凭据本身由您在设备的 Apple ID 设置中管理。</p>
     <p><strong>Sign in with Apple（AI 功能，可选）：</strong>使用 AI 灵修功能时，应用提供 Sign in with Apple。我们<strong>不申请任何 scope</strong>，因此 Apple 仅向我们的服务器提供一个稳定的匿名用户标识（绝非您的邮箱或姓名）。我们的服务器校验 Apple 对该标识的密码学签名后签发自有的短期会话。您的订阅权益直接由您设备呈现的 Apple 签名 StoreKit 2 交易验证——不经任何第三方——因此绑定到经核验的身份、无法被冒充。除 AI 功能外，您无需登录即可使用本应用；您可随时在"设置"中删除账号（将清除我们缓存的会话与权益数据；Apple ID 凭据本身及任何有效订阅由您在设备的 Apple ID 设置中管理）。</p>
+    <p><strong>精选音色与经文解读（我们不存储什么）：</strong>在线播放精选朗读音色、打开大白话解读均需登录（用于流媒体/权益鉴权）。这类请求仅携带您的匿名会话标识、您打开的章卷或经文，以及（解读）您的 Premium 状态；我们不会生成或保留任何"您播放过哪些章、查阅过哪些经文"的清单。朗读音频与解读文案是我们在服务端预备好的内容，不是您的个人内容。</p>
 
     <h2>3. 您的内容存储在哪里</h2>
     <p>以下数据<strong>仅存储在您的设备上</strong>,绝不会发送到我们的服务器:</p>
@@ -143,6 +147,7 @@
         <li>AI 生成内容仅供鼓励参考,<strong>可能不准确或带有偏见</strong>,不构成专业心理咨询、医疗或心理健康建议,也不构成宗教权威指导。重要事项请对照《圣经》核实,并按需咨询合格的专业人士。</li>
     </ul>
     <p><strong>您的输入在何处处理:</strong>我们的后端服务器位于<strong>欧盟</strong>(德国法兰克福)。使用 AI 灵修功能时,您的文本输入会传输到这些位于欧盟的服务器,我们的 AI 提供商(Mistral)也在欧盟(EU 数据驻留为 Mistral 默认设置)处理您的输入。灵修生成后,该输入仅存于您账号的灵修历史中(详见第 3 节)——绝不会出现在任何服务器日志里。</p> <p><strong>数据驻留与传输:</strong>您的输入在欧盟境内处理与存储——我们的后端(德国法兰克福)与 AI 提供商(Mistral)均在欧盟运营。若将来确有必要在欧盟境外处理,我们将依据欧盟委员会批准的标准合同条款(SCC)(或同等有效的合法保障机制)。<strong>我们不会将您的数据传输至中国,或任何不具备充分数据保护水平的司法管辖区。</strong></p>
+    <p><strong>大白话解读：</strong>在圣经阅读器中长按经文时显示的解读，由我们在服务端基于公有领域圣经文本预先用 AI 生成（不涉及您的任何输入），以只读方式下发；应用内明确标注其为 AI 生成。打开解读仅发送该节经文的引用与您的会话（用于 Premium 权益校验）——存储与否详见第 2 节。</p>
     <p><strong>法律依据（欧盟用户）：</strong>根据 GDPR，我们处理您的文本输入以生成 AI 灵修的合法性基础为 <strong>第 9(2)(a) 条——您的明确同意</strong>，您在阅读同意说明并开始使用本应用时即视为同意（若您跳过，则在首次点击"生成"时征求）。您可以随时撤回该同意——详见第 9 节"撤回同意"。撤回不影响撤回前基于同意进行的处理的合法性。</p>
     <p><strong>自动化决策：</strong>AI 灵修完全通过自动化方式生成，未经人工审核。根据 GDPR 第 22 条，您有权不受仅基于自动处理作出的决策的约束，当该决策对您产生法律效力或类似重大影响时。灵修内容仅供鼓励参考，不构成专业建议（医疗、心理健康、法律或财务），也不用于对您个人作出任何决定。若您不希望接收未经人工审核的 AI 生成内容，请勿使用此功能。</p>
     <p><strong>数据控制者与处理者：</strong>根据适用数据保护法，<strong>我们（应用开发者）是数据控制者</strong>——决定处理哪些数据及为何处理。<strong>Mistral AI（法国/欧洲公司）是数据处理者</strong>，按照我们的指示生成灵修内容。您与 Mistral 的关系受 Mistral 自身隐私政策与条款的约束。</p>
@@ -157,6 +162,7 @@
             </ul>
             详见 Mistral 的《商业服务条款》（训练）与《隐私政策》（留存）。</li>
         <li><strong>购买与订阅(Apple App Store):</strong>当您购买或恢复 Premium 时,交易完全由 Apple App Store 处理。我们在服务器端使用您设备呈现的 Apple 签名 StoreKit 2 交易向 Apple 验证您的 Premium 权益——不涉及任何第三方权益 SDK。Apple 仅接收其作为购买处理方本就处理的内容;我们不接收您的姓名、电子邮件或联系信息,也不将您的任何购买信息共享给任何分析或追踪服务。参见 <a href="https://www.apple.com/legal/privacy">Apple 隐私政策</a>。</li>
+        <li><strong>音频分发（Cloudflare R2）：</strong>精选朗读章节存储于 Cloudflare R2 对象存储并经其分发——下载链接为我们的欧盟后端签发的短期签名链接。音频文件本身是公有领域圣经文本的朗读，不含任何个人数据；Cloudflare 不会从我们处收到您的账号标识。</li>
     </ul>
     <p>我们不集成任何广告网络、社交媒体 SDK 或追踪工具。</p>
 

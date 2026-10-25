@@ -37,10 +37,39 @@
         .app-icon { width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 4px 14px rgba(60,46,32,.18); flex: 0 0 auto; }
         @media (max-width: 480px) { .hero { flex-direction: column; align-items: flex-start; } }
     </style>
+<style>
+/* 三语块(2026-10-25):JS 按系统语言/手动选择只显示一种;无 JS 时全部显示(旧行为)。 */
+html[data-pglang="en"] .langblock:not([data-lang="en"]),
+html[data-pglang="zh"] .langblock:not([data-lang="zh"]),
+html[data-pglang="zh-Hant"] .langblock:not([data-lang="zh-Hant"]) { display: none; }
+.langpick { color:#888; font-size:14px; margin-bottom:24px; }
+.langpick a { color:#8B7355; text-decoration:none; }
+html[data-pglang="en"] .langpick a[data-setlang="en"],
+html[data-pglang="zh"] .langpick a[data-setlang="zh"],
+html[data-pglang="zh-Hant"] .langpick a[data-setlang="zh-Hant"] { font-weight:700; text-decoration:underline; }
+</style>
+<script>
+(function(){
+  var pick = null;
+  try { pick = localStorage.getItem('bdlang'); } catch (e) {}
+  if (pick !== 'en' && pick !== 'zh' && pick !== 'zh-Hant') {
+    pick = 'en';
+    var langs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || 'en'];
+    for (var i = 0; i < langs.length; i++) {
+      var l = String(langs[i] || '');
+      if (/^(zh-Hant|zh-TW|zh-HK|zh-MO)/i.test(l)) { pick = 'zh-Hant'; break; }
+      if (/^zh/i.test(l)) { pick = 'zh'; break; }
+    }
+  }
+  document.documentElement.setAttribute('data-pglang', pick);
+})();
+function setlang(l){ try{ localStorage.setItem('bdlang', l); }catch(e){} document.documentElement.setAttribute('data-pglang', l); return false; }
+</script>
 </head>
 <body>
 <div class="container">
-    <p class="lang">English below · <a href="#zh">中文完整版见下方</a></p>
+<p class="langpick"><a href="#" data-setlang="en" onclick="return setlang('en')">English</a> · <a href="#" data-setlang="zh" onclick="return setlang('zh')">简体中文</a> · <a href="#" data-setlang="zh-Hant" onclick="return setlang('zh-Hant')">繁體中文</a></p>
+<section class="langblock" data-lang="en">
 
     <!-- ① Hero (copy: onboarding welcome page slogans) -->
     <div class="hero">
@@ -120,6 +149,8 @@
         <p><a href="./support.html">Support</a> · <a href="./">Privacy Policy</a> · <a href="./terms.html">Terms of Use</a></p>
     </div>
 
+</section>
+<section class="langblock" data-lang="zh">
     <div class="hero" id="zh">
       <img class="app-icon" src="img/app_icon.png" alt="中文圣经 App 图标">
       <div>
@@ -192,6 +223,81 @@
     <div class="contact">
         <p><a href="./support.html">支持中心</a> · <a href="./">隐私政策</a> · <a href="./terms.html">使用条款</a></p>
     </div>
+</section>
+<section class="langblock" data-lang="zh-Hant">
+    <div class="hero">
+      <img class="app-icon" src="img/app_icon.png" alt="中文聖經 App 圖標">
+      <div>
+        <h2 style="border-bottom: none; margin-top: 0;">中文介紹 · 中文聖經：AI查經、讀經、禱告</h2>
+        <p class="tagline">你的問題，聖經裏或許有答案。</p>
+        <p class="sub">把聖經，放進你的每一天。</p>
+      </div>
+    </div>
+    <a class="cta" href="https://apps.apple.com/app/id6781559150">⬇︎ 免費下載 · 7 天試用 AI 靈脩</a>
+    <div class="shots">
+        <img src="img/hant_01_today.png" alt="今日經文">
+        <img src="img/hant_02_reader.png" alt="整本聖經閱讀器" loading="lazy">
+        <img src="img/hant_03_for_you.png" alt="寫下近況" loading="lazy">
+        <img src="img/hant_04_devotional_result.png" alt="完整靈脩" loading="lazy">
+        <img src="img/hant_05_verse_share.png" alt="分享經文" loading="lazy">
+        <img src="img/hant_06_devotional_share.png" alt="分享靈脩" loading="lazy">
+        <img src="img/hant_07_saved.png" alt="經文收藏" loading="lazy">
+        <img src="img/hant_08_settings.png" alt="設置" loading="lazy">
+        <img src="img/hant_09_today_dark.png" alt="今日（深色模式）" loading="lazy">
+    </div>
+    <video controls preload="none" poster="img/hant_01_today.png">
+        <source src="preview_zh.m4v" type="video/mp4">
+    </video>
+
+    <h2>你的問題，聖經裏或許有答案。</h2>
+    <ul>
+        <li><strong>AI 靈脩</strong>——寫下近況,得到一段經文、一份解讀、一條行動建議,和一段爲你寫的禱告。</li>
+        <li><strong>今日經文</strong>——每天一節,爲你預備;無需訂閱,永久免費。</li>
+        <li><strong>保存 &amp; 分享</strong>——值得留下,值得分享;收藏與靈脩歷史跨設備跟隨。</li>
+        <li><strong>每日提醒 &amp; 桌面小組件</strong>——把聖經,放進你的每一天。</li>
+    </ul>
+
+    <h2>值得託付</h2>
+    <div class="card">
+        <p><strong>隱私優先。</strong>無廣告、無第三方分析、無追蹤。登錄可選,且只使用匿名標識——絕不需要你的郵箱或姓名。AI 輸入在歐盟處理;僅保存於你賬號下可隨時刪除的靈脩歷史。詳見<a href="./">隱私政策</a>。</p>
+        <p><strong>AI 不僞造經文。</strong>經文正文永遠由內置的公有領域聖經(和合本 1919 + 英文 WEB + KJV,31,091 節)按出處取出,絕不靠 AI 記憶複述。</p>
+        <p><strong>危機安全。</strong>若你寫下自傷的念頭,App 會回應經過審覈的幫助資源,而不是生成內容。</p>
+    </div>
+
+    <h2>免費與 Premium</h2>
+    <div class="split">
+        <div>
+            <h3>免費——永久</h3>
+            <ul>
+                <li>每日經文 + 相關經文</li>
+                <li>整本聖經閱讀器（WEB／和合本1919／KJV），完全離線</li>
+                <li>原文朗讀——內置音色 + 精選高品質音色</li>
+                <li>桌面小組件 + 歷史今日回看</li>
+                <li>經文收藏、最近靈脩、保存與分享</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Premium——AI 靈脩</h3>
+            <ul>
+                <li>一段經文</li>
+                <li>一份解讀</li>
+                <li>一條行動建議</li>
+                <li>爲你寫的禱告</li>
+                <li>逐節大白話解讀（閱讀時長按任意經文）</li>
+                <li>每天最多 30 次</li>
+            </ul>
+        </div>
+    </div>
+    <p>新用戶 <strong>7 天免費試用</strong> · 從 Apple ID 扣費 · 隨時取消(週期結束前至少 24 小時)。</p>
+    <p class="note">免費功能永久免費——無需訂閱。</p>
+
+    <h2>開始使用</h2>
+    <a class="cta" href="https://apps.apple.com/app/id6781559150">⬇︎ 免費下載 · 7 天試用 AI 靈脩</a>
+
+    <div class="contact">
+        <p><a href="./support.html">支持中心</a> · <a href="./">隱私政策</a> · <a href="./terms.html">使用條款</a></p>
+    </div>
+</section>
 </div>
 </body>
 </html>

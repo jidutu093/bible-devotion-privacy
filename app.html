@@ -6,35 +6,35 @@
     <title>Bible App: AI Search &amp; Chat — Daily Bible verse &amp; AI devotional</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #333; line-height: 1.7; background: #faf8f5; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #111; line-height: 1.7; background: #ffffff; }
         .container { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
-        h1 { font-size: 32px; color: #8B7355; margin-bottom: 8px; }
-        .tagline { font-size: 18px; color: #5C4A3A; margin-bottom: 6px; font-weight: 600; }
-        .sub { font-size: 16px; color: #5C4A3A; margin-bottom: 24px; }
-        h2 { font-size: 20px; color: #5C4A3A; margin-top: 34px; margin-bottom: 12px; border-bottom: 1px solid #e8e0d6; padding-bottom: 6px; }
+        h1 { font-size: 32px; color: #000000; margin-bottom: 8px; }
+        .tagline { font-size: 18px; color: #000000; margin-bottom: 6px; font-weight: 600; }
+        .sub { font-size: 16px; color: #000000; margin-bottom: 24px; }
+        h2 { font-size: 20px; color: #000000; margin-top: 34px; margin-bottom: 12px; border-bottom: 1px solid #e0e0e0; padding-bottom: 6px; }
         p, li { margin-bottom: 10px; }
         ul { padding-left: 24px; }
-        .card { background: #f0ebe4; padding: 18px 22px; border-radius: 10px; margin: 16px 0; }
+        .card { background: #f5f5f5; padding: 18px 22px; border-radius: 10px; margin: 16px 0; }
         .lang { color: #888; font-size: 14px; margin-bottom: 24px; }
-        .lang a { color: #8B7355; }
+        .lang a { color: #000000; }
         .shots { display: flex; gap: 12px; overflow-x: auto; padding: 8px 0 16px; }
-        .shots img { width: 212px; height: auto; border-radius: 14px; flex: 0 0 auto; box-shadow: 0 4px 14px rgba(60,46,32,.12); }
-        .cta { display: inline-block; background: #5C4A3A; color: #fff; text-decoration: none; font-size: 17px; font-weight: 600; padding: 12px 26px; border-radius: 10px; margin: 4px 0 20px; }
-        .cta:hover { background: #8B7355; }
-        video { width: 100%; max-width: 360px; border-radius: 18px; box-shadow: 0 4px 14px rgba(60,46,32,.12); display: block; margin: 12px 0; }
-        footer { color: #999; font-size: 13px; margin-top: 40px; border-top: 1px solid #e8e0d6; padding-top: 16px; }
-        footer a { color: #8B7355; }
+        .shots img { width: 212px; height: auto; border-radius: 14px; flex: 0 0 auto; box-shadow: 0 4px 14px rgba(0,0,0,.12); }
+        .cta { display: inline-block; background: #000000; color: #fff; text-decoration: none; font-size: 17px; font-weight: 600; padding: 12px 26px; border-radius: 10px; margin: 4px 0 20px; }
+        .cta:hover { background: #000000; }
+        video { width: 100%; max-width: 360px; border-radius: 18px; box-shadow: 0 4px 14px rgba(0,0,0,.12); display: block; margin: 12px 0; }
+        footer { color: #999; font-size: 13px; margin-top: 40px; border-top: 1px solid #e0e0e0; padding-top: 16px; }
+        footer a { color: #000000; }
         .split { display: flex; gap: 12px; }
-        .split > div { flex: 1; background: #f0ebe4; border-radius: 10px; padding: 14px 18px; }
-        .split h3 { font-size: 15px; color: #8B7355; margin-bottom: 6px; }
+        .split > div { flex: 1; background: #f5f5f5; border-radius: 10px; padding: 14px 18px; }
+        .split h3 { font-size: 15px; color: #000000; margin-bottom: 6px; }
         .split ul { padding-left: 18px; }
         .split li { margin-bottom: 4px; font-size: 14px; }
         .note { color: #888; font-size: 14px; }
-        .contact { background: #f0ebe4; padding: 16px 20px; border-radius: 8px; margin-top: 24px; }
+        .contact { background: #f5f5f5; padding: 16px 20px; border-radius: 8px; margin-top: 24px; }
         /* App identity block (industry convention: icon + name + hook in the
            hero). Icon at 88px, 176px source for retina. */
         .hero { display: flex; align-items: center; gap: 18px; }
-        .app-icon { width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 4px 14px rgba(60,46,32,.18); flex: 0 0 auto; }
+        .app-icon { width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 4px 14px rgba(0,0,0,.18); flex: 0 0 auto; }
         @media (max-width: 480px) { .hero { flex-direction: column; align-items: flex-start; } }
     </style>
 <style>
@@ -42,8 +42,11 @@
 html[data-pglang="en"] .langblock:not([data-lang="en"]),
 html[data-pglang="zh"] .langblock:not([data-lang="zh"]),
 html[data-pglang="zh-Hant"] .langblock:not([data-lang="zh-Hant"]) { display: none; }
+.split .slogan { font-size: 14px; color: #666; margin: 0 0 8px; }
+.split li.sub { padding-left: 16px; font-size: 13.5px; opacity: .78; }
+.split .subnote { font-size: 13px; color: #666; margin: 6px 0 0; }
 .langpick { color:#888; font-size:14px; margin-bottom:24px; }
-.langpick a { color:#8B7355; text-decoration:none; }
+.langpick a { color:#000000; text-decoration:none; }
 html[data-pglang="en"] .langpick a[data-setlang="en"],
 html[data-pglang="zh"] .langpick a[data-setlang="zh"],
 html[data-pglang="zh-Hant"] .langpick a[data-setlang="zh-Hant"] { font-weight:700; text-decoration:underline; }
@@ -84,14 +87,14 @@ function setlang(l){ try{ localStorage.setItem('bdlang', l); }catch(e){} documen
     <div class="shots">
         <img src="img/en_01_today.png" alt="Today's verse">
         <img src="img/en_02_reader.png" alt="The whole-Bible reader" loading="lazy">
-        <img src="img/en_03_for_you.png" alt="Write what's on your mind" loading="lazy">
-        <img src="img/en_04_devotional_result.png" alt="A complete devotional" loading="lazy">
-        <img src="img/en_05_verse_share.png" alt="Share a verse" loading="lazy">
-        <img src="img/en_06_devotional_share.png" alt="Share a devotional" loading="lazy">
-        <img src="img/en_07_saved.png" alt="Saved verses" loading="lazy">
-        <img src="img/en_08_settings.png" alt="Settings" loading="lazy">
-        <img src="img/en_09_today_dark.png" alt="Today, in dark mode" loading="lazy">
-    </div>
+        <img src="img/en_03_listen.png" alt="Listen — it plays chapter by chapter" loading="lazy">
+        <img src="img/en_04_for_you.png" alt="Write what's on your mind" loading="lazy">
+        <img src="img/en_05_devotional_result.png" alt="A complete devotional" loading="lazy">
+        <img src="img/en_06_verse_share.png" alt="Share a verse" loading="lazy">
+        <img src="img/en_07_devotional_share.png" alt="Share a devotional" loading="lazy">
+        <img src="img/en_08_saved.png" alt="Saved verses" loading="lazy">
+        <img src="img/en_09_settings.png" alt="Settings" loading="lazy">
+        <img src="img/en_10_today_dark.png" alt="Today, in dark mode" loading="lazy"></div>
     <video controls preload="none" poster="img/en_01_today.png">
         <source src="preview_en.m4v" type="video/mp4">
     </video>
@@ -100,6 +103,7 @@ function setlang(l){ try{ localStorage.setItem('bdlang', l); }catch(e){} documen
     <h2>Ask, and the Bible may answer.</h2>
     <ul>
         <li><strong>AI Devotional</strong> — write down what's on your mind, and receive a verse, an insight, an action step, and a prayer — written for you.</li>
+        <li><strong>The whole Bible</strong> — all 66 books, fully offline, with read-aloud (built-in voices plus curated high-quality voices).</li>
         <li><strong>Daily Verse</strong> — a verse prepared for you every day. Free forever. No subscription needed.</li>
         <li><strong>Save &amp; Share</strong> — worth keeping, worth sharing. Bookmarks and devotional history follow you across devices.</li>
         <li><strong>Daily Reading Reminder &amp; Home Widget</strong> — let Scripture meet you every day.</li>
@@ -115,31 +119,33 @@ function setlang(l){ try{ localStorage.setItem('bdlang', l); }catch(e){} documen
 
     <!-- ⑤ Free & Premium (copy: onboarding welcome cards + paywall) -->
     <h2>Free &amp; Premium</h2>
-    <div class="split">
+        <div class="split">
         <div>
-            <h3>Free — forever</h3>
+            <h3>Free</h3>
             <ul>
-                <li>Daily verse &amp; related verses</li>
-                <li>Whole-Bible reader (WEB / CUV 1919 / KJV), fully offline</li>
-                <li>Read-aloud — built-in voices, plus curated high-quality voices</li>
-                <li>Home Widget &amp; on-this-day lookback</li>
-                <li>Verse bookmarks, devotional history, save &amp; share</li>
+                <li>Daily verse &amp; sharing</li>
+                <li>Full Bible text + audio</li>
+                <li>Home Widget</li>
+                <li>Saved verses</li>
+                <li>Devotional history</li>
             </ul>
         </div>
         <div>
-            <h3>Premium — AI Devotional</h3>
+            <h3>Premium</h3>
+            <p class="slogan">For your question</p>
             <ul>
-                <li>A verse, located for you</li>
-                <li>An insight in plain words</li>
-                <li>An action step for today</li>
-                <li>A prayer written for you</li>
-                <li>Plain-language notes for every verse (long-press while reading)</li>
-                <li>Up to 30 / day</li>
+                <li>AI Devotionals</li>
+                <li class="sub">Search &amp; Match</li>
+                <li class="sub">Verse Explanation</li>
+                <li class="sub">Practical Reference</li>
+                <li class="sub">Prayer Reference</li>
+                <li>Plain verse notes</li>
             </ul>
+            <p class="subnote">All Free features included</p>
         </div>
     </div>
     <p><strong>7-day free trial</strong> for new users · charged to your Apple ID · cancel anytime, at least 24 hours before the period ends.</p>
-    <p class="note">Free features stay free forever — no subscription needed.</p>
+    <p class="note">Free features stay free forever — no subscription needed. Up to 30 AI devotionals per day.</p>
 
     <!-- ⑥ Closing CTA (copy: onboarding final CTA) -->
     <h2>Get Started</h2>
@@ -154,7 +160,7 @@ function setlang(l){ try{ localStorage.setItem('bdlang', l); }catch(e){} documen
     <div class="hero" id="zh">
       <img class="app-icon" src="img/app_icon.png" alt="中文圣经 App 图标">
       <div>
-        <h2 style="border-bottom: none; margin-top: 0;">中文介绍 · 中文圣经：AI查经、读经、祷告</h2>
+        <h1 style="border-bottom: none; margin-top: 0; margin-bottom: 8px;">中文介绍 · 中文圣经：AI查经、读经、祷告</h1>
         <p class="tagline">你的问题，圣经里或许有答案。</p>
         <p class="sub">把圣经，放进你的每一天。</p>
       </div>
@@ -163,21 +169,22 @@ function setlang(l){ try{ localStorage.setItem('bdlang', l); }catch(e){} documen
     <div class="shots">
         <img src="img/zh_01_today.png" alt="今日经文">
         <img src="img/zh_02_reader.png" alt="整本圣经阅读器" loading="lazy">
-        <img src="img/zh_03_for_you.png" alt="写下近况" loading="lazy">
-        <img src="img/zh_04_devotional_result.png" alt="完整灵修" loading="lazy">
-        <img src="img/zh_05_verse_share.png" alt="分享经文" loading="lazy">
-        <img src="img/zh_06_devotional_share.png" alt="分享灵修" loading="lazy">
-        <img src="img/zh_07_saved.png" alt="经文收藏" loading="lazy">
-        <img src="img/zh_08_settings.png" alt="设置" loading="lazy">
-        <img src="img/zh_09_today_dark.png" alt="今日（深色模式）" loading="lazy">
-    </div>
+        <img src="img/zh_03_listen.png" alt="听书——选章即播" loading="lazy">
+        <img src="img/zh_04_for_you.png" alt="写下近况" loading="lazy">
+        <img src="img/zh_05_devotional_result.png" alt="完整灵修" loading="lazy">
+        <img src="img/zh_06_verse_share.png" alt="分享经文" loading="lazy">
+        <img src="img/zh_07_devotional_share.png" alt="分享灵修" loading="lazy">
+        <img src="img/zh_08_saved.png" alt="经文收藏" loading="lazy">
+        <img src="img/zh_09_settings.png" alt="设置" loading="lazy">
+        <img src="img/zh_10_today_dark.png" alt="今日（深色模式）" loading="lazy"></div>
     <video controls preload="none" poster="img/zh_01_today.png">
         <source src="preview_zh.m4v" type="video/mp4">
     </video>
 
     <h2>你的问题，圣经里或许有答案。</h2>
     <ul>
-        <li><strong>AI 灵修</strong>——写下近况,得到一段经文、一份解读、一条行动建议,和一段为你写的祷告。</li>
+        <li><strong>AI 灵修</strong>——写下近况,得到一篇为你写的灵修:经文、释义、行动参考、祷文参考。</li>
+        <li><strong>整本圣经</strong>——66 卷完全离线阅读,原文朗读(内置音色 + 精选高品质音色)。</li>
         <li><strong>今日经文</strong>——每天一节,为你预备;无需订阅,永久免费。</li>
         <li><strong>保存 &amp; 分享</strong>——值得留下,值得分享;收藏与灵修历史跨设备跟随。</li>
         <li><strong>每日提醒 &amp; 桌面小组件</strong>——把圣经,放进你的每一天。</li>
@@ -191,31 +198,33 @@ function setlang(l){ try{ localStorage.setItem('bdlang', l); }catch(e){} documen
     </div>
 
     <h2>免费与 Premium</h2>
-    <div class="split">
+        <div class="split">
         <div>
-            <h3>免费——永久</h3>
+            <h3>免费</h3>
             <ul>
-                <li>每日经文 + 相关经文</li>
-                <li>整本圣经阅读器（WEB／和合本1919／KJV），完全离线</li>
-                <li>原文朗读——内置音色 + 精选高品质音色</li>
-                <li>桌面小组件 + 历史今日回看</li>
-                <li>经文收藏、最近灵修、保存与分享</li>
+                <li>每日经文 + 分享</li>
+                <li>整本圣经文本 + 音频</li>
+                <li>桌面小组件</li>
+                <li>经文收藏</li>
+                <li>最近灵修</li>
             </ul>
         </div>
         <div>
-            <h3>Premium——AI 灵修</h3>
+            <h3>Premium</h3>
+            <p class="slogan">回应你的问题</p>
             <ul>
-                <li>一段经文</li>
-                <li>一份解读</li>
-                <li>一条行动建议</li>
-                <li>为你写的祷告</li>
-                <li>逐节大白话解读（阅读时长按任意经文）</li>
-                <li>每天最多 30 次</li>
+                <li>AI 灵修</li>
+                <li class="sub">搜索匹配</li>
+                <li class="sub">经文释义</li>
+                <li class="sub">行动参考</li>
+                <li class="sub">祷文参考</li>
+                <li>逐节大白话解读</li>
             </ul>
+            <p class="subnote">含免费版全部功能</p>
         </div>
     </div>
     <p>新用户 <strong>7 天免费试用</strong> · 从 Apple ID 扣费 · 随时取消(周期结束前至少 24 小时)。</p>
-    <p class="note">免费功能永久免费——无需订阅。</p>
+    <p class="note">免费功能永久可用,无需订阅。AI 灵修每天最多生成 30 次。</p>
 
     <h2>开始使用</h2>
     <a class="cta" href="https://apps.apple.com/app/id6781559150">⬇︎ 免费下载 · 7 天试用 AI 灵修</a>
@@ -228,74 +237,77 @@ function setlang(l){ try{ localStorage.setItem('bdlang', l); }catch(e){} documen
     <div class="hero">
       <img class="app-icon" src="img/app_icon.png" alt="中文聖經 App 圖標">
       <div>
-        <h2 style="border-bottom: none; margin-top: 0;">中文介紹 · 中文聖經：AI查經、讀經、禱告</h2>
-        <p class="tagline">你的問題，聖經裏或許有答案。</p>
+        <h1 style="border-bottom: none; margin-top: 0; margin-bottom: 8px;">中文介紹 · 中文聖經：AI查經、讀經、禱告</h1>
+        <p class="tagline">你的問題，聖經裡或許有答案。</p>
         <p class="sub">把聖經，放進你的每一天。</p>
       </div>
     </div>
-    <a class="cta" href="https://apps.apple.com/app/id6781559150">⬇︎ 免費下載 · 7 天試用 AI 靈脩</a>
+    <a class="cta" href="https://apps.apple.com/app/id6781559150">⬇︎ 免費下載 · 7 天試用 AI 靈修</a>
     <div class="shots">
         <img src="img/hant_01_today.png" alt="今日經文">
         <img src="img/hant_02_reader.png" alt="整本聖經閱讀器" loading="lazy">
-        <img src="img/hant_03_for_you.png" alt="寫下近況" loading="lazy">
-        <img src="img/hant_04_devotional_result.png" alt="完整靈脩" loading="lazy">
-        <img src="img/hant_05_verse_share.png" alt="分享經文" loading="lazy">
-        <img src="img/hant_06_devotional_share.png" alt="分享靈脩" loading="lazy">
-        <img src="img/hant_07_saved.png" alt="經文收藏" loading="lazy">
-        <img src="img/hant_08_settings.png" alt="設置" loading="lazy">
-        <img src="img/hant_09_today_dark.png" alt="今日（深色模式）" loading="lazy">
-    </div>
+        <img src="img/hant_03_listen.png" alt="聽書——選章即播" loading="lazy">
+        <img src="img/hant_04_for_you.png" alt="寫下近況" loading="lazy">
+        <img src="img/hant_05_devotional_result.png" alt="完整靈修" loading="lazy">
+        <img src="img/hant_06_verse_share.png" alt="分享經文" loading="lazy">
+        <img src="img/hant_07_devotional_share.png" alt="分享靈修" loading="lazy">
+        <img src="img/hant_08_saved.png" alt="經文收藏" loading="lazy">
+        <img src="img/hant_09_settings.png" alt="設定" loading="lazy">
+        <img src="img/hant_10_today_dark.png" alt="今日（深色模式）" loading="lazy"></div>
     <video controls preload="none" poster="img/hant_01_today.png">
-        <source src="preview_zh.m4v" type="video/mp4">
+        <source src="preview_zh-Hant.m4v" type="video/mp4">
     </video>
 
-    <h2>你的問題，聖經裏或許有答案。</h2>
+    <h2>你的問題，聖經裡或許有答案。</h2>
     <ul>
-        <li><strong>AI 靈脩</strong>——寫下近況,得到一段經文、一份解讀、一條行動建議,和一段爲你寫的禱告。</li>
+        <li><strong>AI 靈修</strong>——寫下近況,得到一篇爲你寫的靈修:經文、釋義、行動參考、禱文參考。</li>
+        <li><strong>整本聖經</strong>——66 卷完全離線閱讀,原文朗讀(內置音色 + 精選高品質音色)。</li>
         <li><strong>今日經文</strong>——每天一節,爲你預備;無需訂閱,永久免費。</li>
-        <li><strong>保存 &amp; 分享</strong>——值得留下,值得分享;收藏與靈脩歷史跨設備跟隨。</li>
+        <li><strong>保存 &amp; 分享</strong>——值得留下,值得分享;收藏與靈修歷史跨設備跟隨。</li>
         <li><strong>每日提醒 &amp; 桌面小組件</strong>——把聖經,放進你的每一天。</li>
     </ul>
 
     <h2>值得託付</h2>
     <div class="card">
-        <p><strong>隱私優先。</strong>無廣告、無第三方分析、無追蹤。登錄可選,且只使用匿名標識——絕不需要你的郵箱或姓名。AI 輸入在歐盟處理;僅保存於你賬號下可隨時刪除的靈脩歷史。詳見<a href="./">隱私政策</a>。</p>
+        <p><strong>隱私優先。</strong>無廣告、無第三方分析、無追蹤。登入可選,且只使用匿名標識——絕不需要你的電子郵件或姓名。AI 輸入在歐盟處理;僅保存於你帳號下可隨時刪除的靈修歷史。詳見<a href="./">隱私政策</a>。</p>
         <p><strong>AI 不僞造經文。</strong>經文正文永遠由內置的公有領域聖經(和合本 1919 + 英文 WEB + KJV,31,091 節)按出處取出,絕不靠 AI 記憶複述。</p>
         <p><strong>危機安全。</strong>若你寫下自傷的念頭,App 會回應經過審覈的幫助資源,而不是生成內容。</p>
     </div>
 
     <h2>免費與 Premium</h2>
-    <div class="split">
+        <div class="split">
         <div>
-            <h3>免費——永久</h3>
+            <h3>免費</h3>
             <ul>
-                <li>每日經文 + 相關經文</li>
-                <li>整本聖經閱讀器（WEB／和合本1919／KJV），完全離線</li>
-                <li>原文朗讀——內置音色 + 精選高品質音色</li>
-                <li>桌面小組件 + 歷史今日回看</li>
-                <li>經文收藏、最近靈脩、保存與分享</li>
+                <li>每日經文 + 分享</li>
+                <li>整本聖經文本 + 音頻</li>
+                <li>桌面小組件</li>
+                <li>經文收藏</li>
+                <li>最近靈修</li>
             </ul>
         </div>
         <div>
-            <h3>Premium——AI 靈脩</h3>
+            <h3>Premium</h3>
+            <p class="slogan">回應你的問題</p>
             <ul>
-                <li>一段經文</li>
-                <li>一份解讀</li>
-                <li>一條行動建議</li>
-                <li>爲你寫的禱告</li>
-                <li>逐節大白話解讀（閱讀時長按任意經文）</li>
-                <li>每天最多 30 次</li>
+                <li>AI 靈修</li>
+                <li class="sub">搜索匹配</li>
+                <li class="sub">經文釋義</li>
+                <li class="sub">行動參考</li>
+                <li class="sub">禱文參考</li>
+                <li>逐節大白話解讀</li>
             </ul>
+            <p class="subnote">含免費版全部功能</p>
         </div>
     </div>
     <p>新用戶 <strong>7 天免費試用</strong> · 從 Apple ID 扣費 · 隨時取消(週期結束前至少 24 小時)。</p>
-    <p class="note">免費功能永久免費——無需訂閱。</p>
+    <p class="note">免費功能永久可用,無需訂閱。AI 靈修每天最多生成 30 次。</p>
 
     <h2>開始使用</h2>
-    <a class="cta" href="https://apps.apple.com/app/id6781559150">⬇︎ 免費下載 · 7 天試用 AI 靈脩</a>
+    <a class="cta" href="https://apps.apple.com/app/id6781559150">⬇︎ 免費下載 · 7 天試用 AI 靈修</a>
 
     <div class="contact">
-        <p><a href="./support.html">支持中心</a> · <a href="./">隱私政策</a> · <a href="./terms.html">使用條款</a></p>
+        <p><a href="./support.html">支援中心</a> · <a href="./">隱私政策</a> · <a href="./terms.html">使用條款</a></p>
     </div>
 </section>
 </div>

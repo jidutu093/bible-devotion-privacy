@@ -6,17 +6,17 @@
     <title>Bible App: AI Search &amp; Chat - Support</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #333; line-height: 1.7; background: #faf8f5; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #111; line-height: 1.7; background: #ffffff; }
         .container { max-width: 720px; margin: 0 auto; padding: 40px 24px; }
-        h1 { font-size: 28px; color: #8B7355; margin-bottom: 8px; }
-        h2 { font-size: 20px; color: #5C4A3A; margin-top: 32px; margin-bottom: 12px; border-bottom: 1px solid #e8e0d6; padding-bottom: 6px; }
-        h3 { font-size: 16px; color: #5C4A3A; margin-top: 20px; margin-bottom: 6px; }
+        h1 { font-size: 28px; color: #000000; margin-bottom: 8px; }
+        h2 { font-size: 20px; color: #000000; margin-top: 32px; margin-bottom: 12px; border-bottom: 1px solid #e0e0e0; padding-bottom: 6px; }
+        h3 { font-size: 16px; color: #000000; margin-top: 20px; margin-bottom: 6px; }
         p, li { margin-bottom: 10px; }
         ul { padding-left: 24px; }
-        .contact { background: #f0ebe4; padding: 16px 20px; border-radius: 8px; margin-top: 8px; }
+        .contact { background: #f5f5f5; padding: 16px 20px; border-radius: 8px; margin-top: 8px; }
         .lang { color: #888; font-size: 14px; margin-bottom: 24px; }
-        .lang a { color: #8B7355; }
-        .crisis { background: #f7ede8; padding: 14px 18px; border-radius: 8px; margin-top: 24px; }
+        .lang a { color: #000000; }
+        .crisis { background: #f5f5f5; padding: 14px 18px; border-radius: 8px; margin-top: 24px; }
     </style>
 <style>
 /* 三语块(2026-10-25):JS 按系统语言/手动选择只显示一种;无 JS 时全部显示(旧行为)。 */
@@ -24,7 +24,7 @@ html[data-pglang="en"] .langblock:not([data-lang="en"]),
 html[data-pglang="zh"] .langblock:not([data-lang="zh"]),
 html[data-pglang="zh-Hant"] .langblock:not([data-lang="zh-Hant"]) { display: none; }
 .langpick { color:#888; font-size:14px; margin-bottom:24px; }
-.langpick a { color:#8B7355; text-decoration:none; }
+.langpick a { color:#000000; text-decoration:none; }
 html[data-pglang="en"] .langpick a[data-setlang="en"],
 html[data-pglang="zh"] .langpick a[data-setlang="zh"],
 html[data-pglang="zh-Hant"] .langpick a[data-setlang="zh-Hant"] { font-weight:700; text-decoration:underline; }
@@ -51,6 +51,7 @@ function setlang(l){ try{ localStorage.setItem('bdlang', l); }catch(e){} documen
 <div class="container">
 <p class="langpick"><a href="#" data-setlang="en" onclick="return setlang('en')">English</a> · <a href="#" data-setlang="zh" onclick="return setlang('zh')">简体中文</a> · <a href="#" data-setlang="zh-Hant" onclick="return setlang('zh-Hant')">繁體中文</a></p>
 <section class="langblock" data-lang="en">
+    <h1>Bible App: AI Search &amp; Chat — Support</h1>
 
     <!-- ==================== English (complete, standalone) ==================== -->
 
@@ -92,7 +93,8 @@ function setlang(l){ try{ localStorage.setItem('bdlang', l); }catch(e){} documen
 
 </section>
 <section class="langblock" data-lang="zh">
-    <h2 id="zh">联系我们</h2>
+    <h1>支持中心</h1>
+    <h2>联系我们</h2>
     <div class="contact">
         <p>邮箱：<a href="mailto:jidutu093@gmail.com">jidutu093@gmail.com</a>——每一封我们都会读，一般 2 个工作日内回复。</p>
     </div>
@@ -127,9 +129,10 @@ function setlang(l){ try{ localStorage.setItem('bdlang', l); }catch(e){} documen
     </div>
 </section>
 <section class="langblock" data-lang="zh-Hant">
-    <h2>聯繫我們</h2>
+    <h1>支援中心</h1>
+    <h2>聯絡我們</h2>
     <div class="contact">
-        <p>郵箱：<a href="mailto:jidutu093@gmail.com">jidutu093@gmail.com</a>——每一封我們都會讀，一般 2 個工作日內回覆。</p>
+        <p>電子郵件：<a href="mailto:jidutu093@gmail.com">jidutu093@gmail.com</a>——每一封我們都會讀，一般 2 個工作日內回覆。</p>
     </div>
 
     <h2>常見問題</h2>
@@ -138,23 +141,23 @@ function setlang(l){ try{ localStorage.setItem('bdlang', l); }catch(e){} documen
     <ul>
         <li><strong>試用期內會扣費嗎？</strong> 不會。7 天試用完全免費，且僅在試用結束前未取消時，才從你的 Apple ID 扣除訂閱費用。</li>
         <li><strong>訂閱如何扣費？</strong> 訂閱按所選方案從你的 Apple ID 自動續費，除非在當前週期結束前至少 24 小時取消。</li>
-        <li><strong>如何取消？</strong> 訂閱由 Apple 管理：設備「設置 → 你的姓名 → 訂閱」，或 App Store → 頭像 → 訂閱。隨時取消，下一週期起生效。</li>
-        <li><strong>換設備還能用嗎？</strong> 可以。訂閱綁定你的 Apple ID，在新設備打開 App，點「恢復購買」（App 設置 → 訂閱 → 恢復購買，或訂閱頁底部的「恢復購買」鏈接）即可。</li>
+        <li><strong>如何取消？</strong> 訂閱由 Apple 管理：設備「設定 → 你的姓名 → 訂閱」，或 App Store → 頭像 → 訂閱。隨時取消，下一週期起生效。</li>
+        <li><strong>換設備還能用嗎？</strong> 可以。訂閱綁定你的 Apple ID，在新設備打開 App，點「恢復購買」（App 設定 → 訂閱 → 恢復購買，或訂閱頁底部的「恢復購買」連結）即可。</li>
         <li><strong>不訂閱還能用嗎？</strong> 可以。每日經文、整本聖經閱讀器（含朗讀）、桌面小組件與經文收藏永久免費，無需訂閱。</li>
     </ul>
 
     <h3>App 與隱私</h3>
     <ul>
-        <li><strong>AI 會不會編造或曲解經文？</strong> 不會。AI 只選出經文出處並撰寫解讀與禱告；經文正文永遠由內置的公有領域聖經（和合本 1919 + 英文 WEB + KJV，31,091 節）按出處取出，AI 無法僞造經文。靈脩內容僅供鼓勵參考，不構成權威解經。</li>
-        <li><strong>我寫下的心事會被如何處理？</strong> 你的輸入僅用於爲你生成當次靈脩，不用於 AI 訓練；只保存在你 App 內的靈脩歷史中，可隨時刪除。</li>
+        <li><strong>AI 會不會編造或曲解經文？</strong> 不會。AI 只選出經文出處並撰寫解讀與禱告；經文正文永遠由內置的公有領域聖經（和合本 1919 + 英文 WEB + KJV，31,091 節）按出處取出，AI 無法僞造經文。靈修內容僅供鼓勵參考，不構成權威解經。</li>
+        <li><strong>我寫下的心事會被如何處理？</strong> 你的輸入僅用於爲你生成當次靈修，不用於 AI 訓練；只保存在你 App 內的靈修歷史中，可隨時刪除。</li>
         <li><strong>每天最多 30 次，用完了怎麼辦？</strong> 當天到達上限後暫停生成，次日自動恢復。30 次/天遠超日常所需。</li>
-        <li><strong>撤回 AI 數據使用同意</strong>：打開 App → 設置 → 數據與隱私 → AI 數據使用，點「撤回同意」。</li>
-        <li><strong>註銷賬號</strong>：打開 App → 設置 → 賬號 → 註銷賬號。這會清除服務端的會話、權益緩存及與您的匿名標識關聯的服務端記錄（詳見隱私政策）。Apple ID 憑據及任何有效訂閱由您在設備的 Apple ID 設置中自行管理。</li>
-        <li><strong>數據刪除請求</strong>：見<a href="./">隱私政策</a>第 9 節，或郵件聯繫我們。</li>
+        <li><strong>撤回 AI 資料使用同意</strong>：打開 App → 設定 → 資料與隱私 → AI 資料使用，點「撤回同意」。</li>
+        <li><strong>註銷帳號</strong>：打開 App → 設定 → 帳號 → 註銷帳號。這會清除服務端的會話、權益快取及與您的匿名標識關聯的服務端記錄（詳見隱私政策）。Apple ID 憑據及任何有效訂閱由您在設備的 Apple ID 設定中自行管理。</li>
+        <li><strong>資料刪除請求</strong>：見<a href="./">隱私政策</a>第 9 節，或郵件聯絡我們。</li>
     </ul>
 
     <div class="crisis">
-        <p><strong>緊急情況</strong>：如果您或您身邊的人正處於緊迫危險中，請立即聯繫當地緊急救援服務；也可訪問 <a href="https://findahelpline.com">findahelpline.com</a> 查找您所在國家/地區的免費、保密心理援助熱線。</p>
+        <p><strong>緊急情況</strong>：如果您或您身邊的人正處於緊迫危險中，請立即聯絡當地緊急救援服務；也可訪問 <a href="https://findahelpline.com">findahelpline.com</a> 查找您所在國家/地區的免費、保密心理援助熱線。</p>
     </div>
 
     <div class="contact">
